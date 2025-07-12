@@ -1,0 +1,17 @@
+d=int(input())
+m=list(map(int,input().split()))
+n=list(map(int,input().split()))
+over_min=int(input())
+m.sort()
+n.sort(reverse=True)
+s=0
+a=0
+overpay=0
+for i in range(d):
+        s=m[i]+n[i]
+        if s>over_min:
+            a=s-over_min
+            overpay=overpay+a*100
+            s=0
+print(overpay)
+         
